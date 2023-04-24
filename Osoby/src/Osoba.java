@@ -16,7 +16,10 @@ public class Osoba {
         this.imiona.addAll(Arrays.asList(imiona));
     }
     public String toString() {
-        return "Pesel" + this.pesel + "dataurodz" + this.dataurodz + "Nazwisko" + this.nazwisko + "Imiona" + this.imiona;
+        return "{nazwisko:" + nazwisko
+                + ", imie_{i}:" + imiona
+                + ", PESEL:" + pesel
+                + ", ur.:" + dataurodz + "}";
     }
 
 
