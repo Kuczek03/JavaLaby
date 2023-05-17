@@ -50,16 +50,16 @@ public class Osoba {
         System.out.print("Wprowadź nazwisko: ");
         czlowiek.setNazwisko(scanner.next());
         System.out.print("Wprowadz imię 1: ");
-            String pierwszeImie= scanner.next();
+        String pierwszeImie= scanner.next();
         System.out.print("Wprowadź imie 2: ");
-            String drugieImie = scanner.next();
-            czlowiek.setImiona(new ArrayList<String>(Arrays.asList(pierwszeImie,drugieImie)));
+        String drugieImie = scanner.next();
+        czlowiek.setImiona(new ArrayList<String>(Arrays.asList(pierwszeImie,drugieImie)));
         System.out.print("Wprowadź PESEL: ");
-            czlowiek.setPESEL(scanner.nextInt());
-        System.out.print("Podaj date (dd.mm.rrrr): ");
-            String data = scanner.next();
-            String[] dataArray = data.split("-");
-            czlowiek.setDataurodz(LocalDate.of(Integer.parseInt(dataArray[2]),Integer.parseInt(dataArray[1]),Integer.parseInt(dataArray[0])));
+        czlowiek.setPESEL(scanner.nextInt());
+        System.out.print("Podaj date (dd-mm-rrrr): ");
+        String data = scanner.next();
+        String[] dataArray = data.split("-");
+        czlowiek.setDataurodz(LocalDate.of(Integer.parseInt(dataArray[2]),Integer.parseInt(dataArray[1]),Integer.parseInt(dataArray[0])));
         return czlowiek;
     }
     public String toString() {
